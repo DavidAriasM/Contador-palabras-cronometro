@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de palabras con tiempo</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contador de palabras con tiempo</h1>
+        <div class="container-text">
+            <textarea class="words" disabled></textarea>
+            <span class="total"></span>
+            <fieldset>
+                <legend>Elige un tiempo límite</legend>
+                <label>
+                    <input type="radio" name="timeTotal" class="timeTotal" value="10"> 10
+                </label>
+                <label>
+                    <input type="radio" name="timeTotal" class="timeTotal" value="30"> 30
+                </label>
+                <label>
+                    <input type="radio" name="timeTotal" class="timeTotal" value="60" checked> 60
+                </label>
+            </fieldset>
+            <div class="time">
+                <span class="timer"></span>
+            </div>
+            <button class="btn-comenzar">Comenzar</button>
+        </div>
+
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
