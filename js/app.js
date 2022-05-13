@@ -1,4 +1,5 @@
 const radioButtons = document.querySelectorAll('.timeTotal');
+const tiempoDiv = document.querySelector('.time')
 const timerSeconds = document.querySelector('.timer');
 const btnComenzar = document.querySelector('.btn-comenzar');
 const words = document.querySelector('textarea');
@@ -34,6 +35,7 @@ btnComenzar.addEventListener('click', function() {
         if (timerCuentaRegresiva > 0) {
             timerCuentaRegresiva--
             timerSeconds.textContent = timerCuentaRegresiva
+            tiempoDiv.style.animation = 'pulsos 1s infinite linear'
         } else {
             btnComenzar.classList.remove('deshabilitado');
             btnComenzar.disabled = false;
@@ -45,6 +47,7 @@ btnComenzar.addEventListener('click', function() {
             radioButtons.forEach((element, i) => {
                 radioButtons[i].disabled = false
             })
+            tiempoDiv.style.animation = 'none'
         }
     }, 1000)
 })
